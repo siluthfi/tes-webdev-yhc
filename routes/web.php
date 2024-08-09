@@ -1,5 +1,9 @@
 <?php
 
+use App\Http\Controllers\CourseController;
+use App\Http\Controllers\MaterialController;
+use App\Models\Course;
+use App\Models\Material;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,5 +18,14 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
-});
+    $course = Course::all();
+    $materi = Material::all();
+
+    return view('dashboard', [
+        'totalcourse' => count($course),
+        'totalmateri' => count($materi)
+    ]);
+})->name('dashboard');
+
+Route::resource('course', CourseController::class)->names('course');
+Route::resource('material', MaterialController::class)->names('material');
