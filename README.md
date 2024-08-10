@@ -28,19 +28,23 @@
 ## Tampilan Halaman Website
 ### Dashboard
 ![diagram env][dashboard]
+
 [dashboard]: public/img/webdev%20dashboard.png 'Dashboard'
 
 ### Kursus
 - Halaman list kursus
 ![diagram env][list-kursus]
+
 [list-kursus]: public/img/webdev%20kursus.png 'List Kursus'
 
 - Halaman Tambah kursus
 ![diagram env][tambah-kursus]
+
 [tambah-kursus]: public/img/webdev%20tambah%20kursus.png 'Tambah Kursus'
 
 - Halaman Detail Kursus
 ![diagram env][tambah-kursus]
+
 [tambah-kursus]: public/img/webdev%20tambah%20kursus.png 'Tambah Kursus'
 
 ### Materi
