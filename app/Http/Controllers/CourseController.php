@@ -76,7 +76,7 @@ class CourseController extends Controller
 
         $course->update($data);
 
-        return redirect()->route("courses.index")->with("success", "Kursus berhasil diperbarui!");
+        return redirect()->route("course.index")->with("success", "Kursus berhasil diperbarui!");
     }
 
     /**
@@ -84,6 +84,8 @@ class CourseController extends Controller
      */
     public function destroy(Course $course)
     {
-        
+        $course->delete();
+
+        return redirect()->route("course.index")->with("success", "Kursus berhasil dihapus!");
     }
 }

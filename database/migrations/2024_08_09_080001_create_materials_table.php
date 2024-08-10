@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('materials', function (Blueprint $table) {
             $table->id();
             $table->string("judul");
-            $table->string("deskripsi");
+            $table->text("deskripsi");
             $table->text("link_embed");
             $table->foreignId("course_id")->nullable()->constrained("courses")->nullOnDelete();
             $table->timestamps();

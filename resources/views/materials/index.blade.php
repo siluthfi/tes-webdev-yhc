@@ -30,6 +30,15 @@
     </div>
 
     <div class="row">
+        {{-- <div class="col-md-4">
+            <a href="{{ route('course.show', 1) }}" class="text-dark">
+                <x-adminlte-card theme="dark" theme-mode="outline">
+                    <h5 class="" style="font-weight: 700">Title 1</h5>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad nemo aut ipsam praesentium ab accusantium qui similique animi officiis laborum.</p>
+                    <span><i class="far fa-clock"></i> 60 Menit</span>
+                </x-adminlte-card>
+            </a>
+        </div> --}}
         @foreach ($courses as $item)
             <div class="col-md-4">
                 <a href="{{ route('course.show', $item->id) }}" class="text-dark">
@@ -42,7 +51,7 @@
                         @endif
                         @php
                             $durasi = explode(':', $item->durasi);
-                            $jam = intval($durasi[0]) < 10 ? explode('0', $durasi[0])[1] . ' Jam' : $durasi[0] . ' Jam';
+                            $jam = str_contains($durasi[0], 0) ? explode('0', $durasi[0])[1] . ' Jam' : $durasi[0];
                             $menit = $durasi[1] . ' Menit';
                             if (intval($jam) < 1) {
                                 $jam = '';

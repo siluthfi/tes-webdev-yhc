@@ -28,4 +28,6 @@ Route::get('/', function () {
 })->name('dashboard');
 
 Route::resource('course', CourseController::class)->names('course');
+Route::get("course/{course}/material/create", [MaterialController::class, 'create'])->name('course.material.create');
+
 Route::resource('material', MaterialController::class)->names('material');

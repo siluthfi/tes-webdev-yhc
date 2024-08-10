@@ -17,7 +17,10 @@ class CourseFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            "judul"     => $this->faker->words(3, true),
+            "deskripsi" => $this->faker->text(),
+            // "durasi"    => "0" . $this->faker->randomNumber(2) . ":0" . $this->faker->randomNumber(2),
+            "durasi"    => $this->faker->time('H:i', 'now'),
         ];
     }
 }

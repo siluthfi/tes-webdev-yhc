@@ -1,23 +1,33 @@
 @extends('adminlte::page')
 
-@section('title', 'Tambah Kursus')
+@section('title', 'Tambah Materi')
 
 @section('content_header')
-    <h1>Tambah Kursus</h1>
+    <h1>Tambah Materi</h1>
 @stop
 
 @section('content')
+    @php
+        $course = isset(request()->course) ? request()->course : null;
+    @endphp
+
     <div class="row">
         <div class="col-md">
-            <x-adminlte-card title="Form Kursus" theme="info">
-                <form action="{{ route('course.store') }}" method="POST">
+            <x-adminlte-card title="Form Materi" theme="info">
+                <form action="{{ route('material.store') }}" method="POST">
                     @csrf
                     <label for="judul">Judul</label>
                     <input type="text" name="judul" id="judul" class="form-control mb-3" required>
                     <label for="deskripsi">Deskripsi</label>
                     <textarea name="deskripsi" class="form-control mb-3" id="deskripsi" rows="3" required></textarea>
-                    <label for="durasi">Durasi</label>
-                    <input type="text" name="durasi" id="durasi" class="form-control html-duration-picker mb-3" data-hide-seconds required>
+                    <label for="link_embed">Link Embed</label>
+                    <input type="text" name="link_embed" id="link_embed" class="form-control mb-3" required>
+                    <label for="kursus">Kursus</label>
+                    <select class="form-control mb-3" name="course_id" id="kursus">
+                        @foreach ($courses as $item)
+                        <option value="{{ $item->id }}" {{ $course == $item->id ? 'selected' : '' }}>{{ $item->judul }}</option>
+                        @endforeach
+                    </select>
                     <button type="submit" class="btn btn-primary">Simpan</button>
                 </form>
             </x-adminlte-card>

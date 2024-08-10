@@ -17,7 +17,10 @@ class MaterialFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            "judul"      => $this->faker->words(3, true),
+            "deskripsi"  => $this->faker->text(),
+            "link_embed" => $this->faker->url(),
+            "course_id"  => $this->faker->randomDigitNotNull(),
         ];
     }
 }
