@@ -42,9 +42,23 @@
 
 [tambah-kursus]: public/img/webdev%20tambah%20kursus.png 'Tambah Kursus'
 
-- Halaman Detail Kursus
-![diagram env][tambah-kursus]
+- Halaman Detail Kursus & List Materi
+![diagram env][detail-kursus]
 
-[tambah-kursus]: public/img/webdev%20tambah%20kursus.png 'Tambah Kursus'
+[detail-kursus]: public/img/webdev%20detail%20kursus%20&%20list%20materi.png 'Detail kursus & List Materi'
+
+- Halaman Edit Kursus
+![diagram env][edit-kursus]
+
+[edit-kursus]: public/img/webdev%20edit%20kursus.png 'Edit Kursus'
 
 ### Materi
+- Halaman Tambah Materi
+![diagram env][tambah-materi]
+
+[tambah-materi]: public/img/webdev%20tambah%20materi.png 'Tambah Materi'
+
+- Halaman Edit Materi
+![diagram env][edit-materi]
+
+[edit-materi]: public/img/webdev%20edit%20materi.png 'edit Materi'
